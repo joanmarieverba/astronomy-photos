@@ -1,0 +1,16 @@
+{
+	"paths": {
+		"css": ["/js", "/prod/js"],
+		"images": ["/i", "/prod/i"],
+		"js": ["/js", "/prod/js"],
+		"dummy": ["/dummy", "/prod/dummy"]
+	},
+	"port": "3128",
+	"router": {
+		"pages": {
+			"rule": "/pages/:page",
+			"path": "./prod/pages",
+			"ext": "html"
+		}
+	}
+}
