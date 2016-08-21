@@ -23,6 +23,7 @@ body {
 }
 
 #apod_explanation {
+  color: white;
   text-align: justify;
 }
 
