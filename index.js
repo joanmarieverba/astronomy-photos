@@ -2,7 +2,16 @@
 var url = "https://api.nasa.gov/planetary/apod?api_key=qyWNL5v6NxLOzatBHuyHwGmptvveVEGLGIi6hUGf";
 var months = ["placeholder", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+$body = $("body");
+
+$(document).bind({
+   ajaxStart: function() { $body.addClass("loading");   },
+   ajaxStop:  function() { $body.removeClass("loading");}
+});
+
+
 $.ajax({
+
   url: url,
   success: function(result){
     console.log(result);
