@@ -22,6 +22,11 @@ body {
   margin: 0 auto;
 }
 
+#apod_vid_id {
+  display: block;
+  margin: 0 auto;
+}
+
 #apod_explanation {
   color: white;
   display: block;
