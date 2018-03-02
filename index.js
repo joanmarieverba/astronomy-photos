@@ -1,6 +1,6 @@
 
-var url = "https://api.nasa.gov/planetary/apod?api_key=qyWNL5v6NxLOzatBHuyHwGmptvveVEGLGIi6hUGf";
-var months = ["placeholder", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let url = "https://api.nasa.gov/planetary/apod?api_key=qyWNL5v6NxLOzatBHuyHwGmptvveVEGLGIi6hUGf";
+const months = ["placeholder", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 $body = $("body");
 
@@ -16,10 +16,10 @@ $.ajax({
   success: function(result){
     console.log(result);
   if("copyright" in result) {
-    $("#copyright").text("Image Credits: " + result.copyright);
+    $("#copyright").text(`Image Credits: ${result.copyright}`);
   }
   else {
-    $("#copyright").text("Image Credits: " + "Public Domain");
+    $("#copyright").text(`Image Credits: Public Domain`);
   }
 
   if(result.media_type == "video") {
@@ -35,14 +35,14 @@ $.ajax({
   $("#apod_explanation").text(result.explanation);
   $("#apod_title").text(result.title);
   // $("#apod_date").text(result.date);
-  var date = result.date
-  var year = date.substr(0,4);
-  var monthDigit = date.substr(5,2);
-  var day = date.substr(8,2);
-  var monthNumber = parseInt(monthDigit,10);
-  var month = months[monthNumber];
+  let date = result.date
+  let year = date.substr(0,4);
+  let monthDigit = date.substr(5,2);
+  let day = date.substr(8,2);
+  let monthNumber = parseInt(monthDigit,10);
+  let month = months[monthNumber];
   console.log(day, monthDigit);
-  var dateString = month + " " + day + ", " + year;
+  let dateString = `${month} ${day}, ${year}`;
   $("#apod_date").text(dateString);
 
 }
