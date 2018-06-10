@@ -1,1 +1,4 @@
-This is a class project accessing the NASA API.
+This displayed the Astronomy Photo of the Day by accessing the NASA API.  
+Uses JavaScript, jQuery.
+
+![alt text](myAPOD.jpg) 
