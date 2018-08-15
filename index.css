@@ -1,5 +1,6 @@
 body {
-  background-image: url("http://jmvtestsite.com/wp-content/uploads/2016/07/1.jpg");
+  background-image: url("apod-background.jpg");
+  background-size: cover;
   font-family: 'Roboto';
   padding: 20px;
 }
@@ -28,10 +29,11 @@ body {
 }
 
 #apod_explanation {
-  color: white;
+  color:black;
   display: block;
   margin: 0 auto;
   text-align: justify;
+  font-weight: bold;
   width: 75%;
 }
 
@@ -48,7 +50,7 @@ body {
 }
 
 #copyright {
-  color: white;
+  color: black;
   text-align: center;
 }
 
